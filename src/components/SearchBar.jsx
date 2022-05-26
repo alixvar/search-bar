@@ -64,15 +64,15 @@ function SearchBar({ placeholder, data }) {
         )}
       </div>
       <div className="flex-col items-center p-2 absolute bottom-16 justify-center">
-        <p>Made By Ali Sadeghy</p>
         <a
           href="https://github.com/alixvar/search-bar"
           target="_blank"
           rel="noreferrer"
-          className="mt-2 w-full gap-2 flex items-center justify-center border p-1 rounded-md hover:bg-gray-800 hover:border-gray-800 hover:text-white transition-all "
+          className=" w-full gap-2 flex items-center justify-center border p-1 rounded-md hover:bg-gray-800 hover:border-gray-800 hover:text-white transition-all "
         >
           <GitHubIcon fontSize="large" /> <span>Github Link</span>
         </a>
+        <p className="mt-2 text-sm">Made By Ali Sadeghy</p>
       </div>
     </div>
   );
