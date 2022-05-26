@@ -29,8 +29,11 @@ function SearchBar({ placeholder, data }) {
 
   return (
     <div className="flex flex-col bg-slate-300 h-screen items-center ">
+      <h1 className="text-xl font-bold text-slate-500 mt-16">
+        Book Search Bar
+      </h1>
       <div className="w-[75%] max-w-[400px] lg:max-w-[400px] ">
-        <div className="mt-16 flex bg-white h-fit">
+        <div className="mt-10 flex bg-white h-fit">
           <input
             type="text"
             placeholder={placeholder}
@@ -40,7 +43,7 @@ function SearchBar({ placeholder, data }) {
           />
           <div className="flex items-center px-4 shadow-md">
             {inputValue === "" ? (
-              <Search />
+              <Search className="opacity-50" />
             ) : (
               <Close className="cursor-pointer" onClick={handleRemove} />
             )}
@@ -60,13 +63,15 @@ function SearchBar({ placeholder, data }) {
           </div>
         )}
       </div>
-      <div className="flex items-center p-2 border ">
+      <div className="flex-col items-center p-2 absolute bottom-16 justify-center">
+        <p>Made By Ali Sadeghy</p>
         <a
           href="https://github.com/alixvar/search-bar"
           target="_blank"
           rel="noreferrer"
+          className="mt-2 w-full gap-2 flex items-center justify-center border p-1 rounded-md hover:bg-gray-800 hover:border-gray-800 hover:text-white transition-all "
         >
-          <GitHubIcon />
+          <GitHubIcon fontSize="large" /> <span>Github Link</span>
         </a>
       </div>
     </div>
